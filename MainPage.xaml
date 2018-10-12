@@ -1,0 +1,286 @@
+﻿<Page
+    x:Class="newSoundBoard.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:newSoundBoard"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:newSoundBoard.Model"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
+
+    <Grid Name="main_grid">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="auto_suggestbox.Width" Value="300"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel >
+            <Button Name="list_button"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    Height="45"
+                    Width="45"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE71D;" 
+                    FontSize="30"       
+                    Foreground="White"
+                    Click="list_button_Click"/>
+            <Button Name="back_button"
+                    RelativePanel.RightOf="list_button"
+                    Height="45"
+                    Width="45"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE0A6;"
+                    Margin="5,0,0,0"
+                    FontSize="30"
+                    Foreground="White"
+                    Click="back_button_Click"/>
+            <TextBlock Name="type_textblock"
+                       FontSize="25"
+                       FontWeight="SemiBold"
+                       FontStyle="Italic"
+                       Foreground="Black"
+                       RelativePanel.RightOf="back_button"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"
+                       Margin="30,0,0,0"/>
+            <AutoSuggestBox Name="auto_suggestbox"
+                        RelativePanel.AlignRightWithPanel="True"
+                        Width="200"
+                        Margin="0,0,10,0"
+                        QueryIcon="Find"
+                        RelativePanel.AlignVerticalCenterWithPanel="True"
+                        PlaceholderText="Search for Sounds"
+                        TextChanged="auto_suggestbox_TextChanged"
+                        QuerySubmitted="auto_suggestbox_QuerySubmitted"/>
+        </RelativePanel>
+        <SplitView Name="main_splitview"
+                   Grid.Row="1"
+                   DisplayMode="CompactInline"
+                   IsPaneOpen="False"
+                   CompactPaneLength="45"
+                   OpenPaneLength="160">
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ListView Name="main_listview"
+                          IsItemClickEnabled="True"
+                          SelectionMode="Single"
+                          ItemsSource="{x:Bind main_icon}"
+                          ItemClick="main_listview_ItemClick">
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="data:Icon">
+                                <StackPanel Orientation="Horizontal"
+                                        Height="70">
+                                    <Image Height="40"
+                                       Width="40"
+                                       Margin="-10,0,0,0"
+                                       VerticalAlignment="Center"
+                                       Source="{x:Bind IconFile}"/>
+                                    <TextBlock Name="animal_textblock" 
+                                               Text="{x:Bind Category}"
+                                               FontSize="20"
+                                               Margin="20,0,0,0"
+                                               FontStyle="Italic"
+                                               Foreground="White"
+                                               VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <ListBox Grid.Row="1"
+                             Name="main_listbox"
+                             Tapped="main_listbox_Tapped">
+                        <ListBoxItem Name="listbox_itemfeedback"
+                                     Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets "
+                                           Text="&#xED15;"
+                                           FontSize="25"
+                                           Foreground="White"
+                                           Margin="-2,0,0,0"
+                                           VerticalAlignment="Center"/>
+                                <TextBlock Name="feedback_textblock"
+                                           Text="FeedBack"
+                                           FontSize="20"
+                                           Margin="26,0,0,0"
+                                           FontStyle="Italic"
+                                           Foreground="White"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Name="listbox_itemSetting">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Assets/Icons/setting.png"
+                                       Height="40"
+                                       Width="40"
+                                       Margin="-10,0,0,0"
+                                       VerticalAlignment="Center"/>
+                                <TextBlock Name="setting_textblock"
+                                           Text="Setting"
+                                           FontSize="20"
+                                           Margin="20,0,0,0"
+                                           FontStyle="Italic"
+                                           Foreground="White"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                </Grid>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid Margin="10,0,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <MediaElement AutoPlay="True"
+                                  Name="media_element"/>
+                    <StackPanel Name="combobox_stackPanel">
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Name="background_textblock" 
+                                       Text="BackGround Color"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       Foreground="White"
+                                       VerticalAlignment="Center"/>
+                            <ComboBox Name="main_combobox"
+                                  Width="150"
+                                  Margin="20,0,0,0"
+                                  HorizontalContentAlignment="Center"
+                                  SelectionChanged="main_combobox_SelectionChanged_1">
+                                <ComboBoxItem Content="Gray"/>
+                                <ComboBoxItem Content="Red"/>
+                                <ComboBoxItem Content="DimGray"/>
+                                <ComboBoxItem Content="SkyBlue"/>
+                                <ComboBoxItem Content="LightBlue"/>
+                                <ComboBoxItem Content="Brown"/>
+                                <ComboBoxItem Content="DeepPink"/>
+                            </ComboBox>
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Name="Opacity_textblock"
+                                   FontSize="20"
+                                       Foreground="White"
+                                   FontWeight="Bold"
+                                   Text="Opacity"/>
+                            <Slider Name="setting_slider"
+                                    Margin="20,0,0,0"
+                                    Height="50"
+                                    Width="200"
+                                    Maximum="1"
+                                    Minimum="0"
+                                    StepFrequency="0.01"
+                                    ValueChanged="setting_slider_ValueChanged"/>
+                        </StackPanel>
+                        
+                        <!--<ColorPicker x:Name="myColorPicker"
+                                     ColorSpectrumShape="Box"
+                                     IsAlphaEnabled="True"
+                                     IsColorChannelTextInputVisible="False"
+                                     IsAlphaTextInputVisible="False"
+                                     HorizontalAlignment="Center"
+                                     ColorChanged="myColorPicker_ColorChanged"/>-->
+                        <!--<StackPanel Orientation="Horizontal">
+                            <TextBlock Name="foreground_textblock" 
+                                       Text="Foreground Color"
+                                       FontSize="20"
+                                       Foreground="White"
+                                       Margin="5,10,0,0"
+                                       VerticalAlignment="Center"/>
+                            <ComboBox Name="foreground_combobox"
+                                  Width="150"
+                                  Margin="34,10,0,0"
+                                  HorizontalContentAlignment="Center"
+                                  SelectionChanged="foreground_combobox_SelectionChanged">
+                                <ComboBoxItem Content="Gray"/>
+                                <ComboBoxItem Content="Red"/>
+                                <ComboBoxItem Content="DimGray"/>
+                                <ComboBoxItem Content="SkyBlue"/>
+                                <ComboBoxItem Content="LightBlue"/>
+                                <ComboBoxItem Content="Yellow"/>
+                                <ComboBoxItem Content="DeepPink"/>
+                            </ComboBox>
+
+                        </StackPanel>-->
+                        <Button Name="content_button"
+                                Height="50"
+                                Width="100"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="WhiteSmoke"
+                                Content="About"
+                                Margin="0,30,0,0"
+                                HorizontalAlignment="Center"
+                                Click="about_button_Click"/>
+                        <TextBlock Name="github_textblock"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   FontStyle="Italic"
+                                   Margin="0,30,0,0" 
+                                   Foreground="WhiteSmoke"
+                                   HorizontalAlignment="Center"
+                                   Text="Project Url:"/>
+                        <TextBlock Name="uri_textblock"
+                                   FontSize="15"
+                                   FontStyle="Italic"
+                                   Margin="5" 
+                                   Foreground="WhiteSmoke"
+                                   IsTextSelectionEnabled="True"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Center"
+                                   Text="https://github.com/singhwong/UWP-SoundBoard"/>
+                    </StackPanel>
+
+
+                    <TextBlock Name="main_textblock"
+                               Text="All Sounds"
+                               FontSize="50"
+                               FontStyle="Italic"
+                               Foreground="White"
+                               Grid.Row="1"/>
+                    <GridView Name="main_gridview"
+                              SelectionMode="None"
+                              IsItemClickEnabled="True"                             
+                              ItemsSource="{x:Bind main_sound}"
+                              AllowDrop="True"
+                              Drop="main_gridview_Drop"
+                              DragOver="main_gridview_DragOver"
+                              Grid.Row="2"
+                              ItemClick="main_gridview_ItemClick">
+                        <GridView.ItemTemplate>
+                            <DataTemplate x:DataType="data:Sound">
+                                <local:MyUserControl1/>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                    </GridView>
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
+</Page>

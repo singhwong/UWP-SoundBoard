@@ -1,0 +1,2 @@
+MainPackage=C:\Users\singhwong\source\repos\UWP\UWP-SoundBoard\bin\x86\Release\newSoundBoard_1.2.11.0_x86.appx
+SymbolPackage=C:\Users\singhwong\source\repos\UWP\UWP-SoundBoard\AppPackages\newSoundBoard_1.2.11.0_Test\newSoundBoard_1.2.11.0_x86.appxsym

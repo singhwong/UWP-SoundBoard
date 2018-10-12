@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{D0EE1403-B7BD-4D63-BE25-1459542D92DF}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>newSoundBoard</RootNamespace>
+    <AssemblyName>newSoundBoard</AssemblyName>
+    <DefaultLanguage>en-us</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>newSoundBoard_StoreKey.pfx</PackageCertificateKeyFile>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>D8133A6DE463160424DA3DA068D65FD6E5C7887F</PackageCertificateThumbprint>
+    <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Icon.cs" />
+    <Compile Include="Model\Sound.cs" />
+    <Compile Include="Model\SoundManager.cs" />
+    <Compile Include="MyUserControl1.xaml.cs">
+      <DependentUpon>MyUserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="settingPage.xaml.cs">
+      <DependentUpon>settingPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="newSoundBoard_StoreKey.pfx" />
+    <None Include="newSoundBoard_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Audio\Animals\Bear.wav" />
+    <Content Include="Assets\Audio\Animals\Camel.wav" />
+    <Content Include="Assets\Audio\Animals\Cat.wav" />
+    <Content Include="Assets\Audio\Animals\Chicken.wav" />
+    <Content Include="Assets\Audio\Animals\Cow.wav" />
+    <Content Include="Assets\Audio\Animals\Crocodile.wav" />
+    <Content Include="Assets\Audio\Animals\Deer.wav" />
+    <Content Include="Assets\Audio\Animals\Dog.wav" />
+    <Content Include="Assets\Audio\Animals\Dragon.wav" />
+    <Content Include="Assets\Audio\Animals\Duck.wav" />
+    <Content Include="Assets\Audio\Animals\Eagle.wav" />
+    <Content Include="Assets\Audio\Animals\Elephant.wav" />
+    <Content Include="Assets\Audio\Animals\Fish.wav" />
+    <Content Include="Assets\Audio\Animals\Hippo.wav" />
+    <Content Include="Assets\Audio\Animals\Horse.wav" />
+    <Content Include="Assets\Audio\Animals\Koala.wav" />
+    <Content Include="Assets\Audio\Animals\Lion.wav" />
+    <Content Include="Assets\Audio\Animals\Monkey.wav" />
+    <Content Include="Assets\Audio\Animals\Moose.wav" />
+    <Content Include="Assets\Audio\Animals\MotorCycle.wav" />
+    <Content Include="Assets\Audio\Animals\Mouse.wav" />
+    <Content Include="Assets\Audio\Animals\Myna.wav" />
+    <Content Include="Assets\Audio\Animals\Panda.wav" />
+    <Content Include="Assets\Audio\Animals\Penguin.wav" />
+    <Content Include="Assets\Audio\Animals\Pig.wav" />
+    <Content Include="Assets\Audio\Animals\Rattlesnake.wav" />
+    <Content Include="Assets\Audio\Animals\Seal.wav" />
+    <Content Include="Assets\Audio\Animals\Squirrel.wav" />
+    <Content Include="Assets\Audio\Nature\Ice.wav" />
+    <Content Include="Assets\Audio\Nature\Raindrop.wav" />
+    <Content Include="Assets\Audio\Traffic\Bicycle.wav" />
+    <Content Include="Assets\Audio\Traffic\Bullet train.wav" />
+    <Content Include="Assets\Audio\Traffic\Helicopter.wav" />
+    <Content Include="Assets\Audio\Traffic\Police.wav" />
+    <Content Include="Assets\Audio\Animals\Rabbit.wav" />
+    <Content Include="Assets\Audio\Animals\Sheep.wav" />
+    <Content Include="Assets\Audio\Traffic\Ship.wav" />
+    <Content Include="Assets\BadgeLogo.scale-100.png" />
+    <Content Include="Assets\BadgeLogo.scale-125.png" />
+    <Content Include="Assets\BadgeLogo.scale-150.png" />
+    <Content Include="Assets\BadgeLogo.scale-400.png" />
+    <Content Include="Assets\Images\Animals\Fish.png" />
+    <Content Include="Assets\Images\Animals\Moose.png" />
+    <Content Include="Assets\Images\Animals\Penguin.png" />
+    <Content Include="Assets\Images\Animals\Rattlesnake.png" />
+    <Content Include="Assets\Images\Animals\Seal.png" />
+    <Content Include="Assets\Images\Animals\Squirrel.png" />
+    <Content Include="Assets\Images\Nature\Ice.png" />
+    <Content Include="Assets\Images\Nature\Raindrop.png" />
+    <Content Include="Assets\Images\Traffic\Ambulance.png" />
+    <Content Include="Assets\Audio\Traffic\Ambulance.wav" />
+    <Content Include="Assets\Images\Traffic\Bicycle.png" />
+    <Content Include="Assets\Images\Traffic\Bullet train.png" />
+    <Content Include="Assets\Images\Traffic\Helicopter.png" />
+    <Content Include="Assets\Images\Traffic\Police.png" />
+    <Content Include="Assets\Images\Traffic\Ship.png" />
+    <Content Include="Assets\Audio\Animals\Tiger.wav" />
+    <Content Include="Assets\Audio\Animals\Wolf.wav" />
+    <Content Include="Assets\Audio\Male\Moaning.wav" />
+    <Content Include="Assets\Audio\Nature\Blizzard.wav" />
+    <Content Include="Assets\Audio\Nature\Earthquake.wav" />
+    <Content Include="Assets\Audio\Nature\Fire.wav" />
+    <Content Include="Assets\Audio\Nature\Lightning.wav" />
+    <Content Include="Assets\Audio\Nature\Rain.wav" />
+    <Content Include="Assets\Audio\Traffic\Plane.wav" />
+    <Content Include="Assets\Audio\Traffic\Train.wav" />
+    <Content Include="Assets\Audio\Male\Ship.wav" />
+    <Content Include="Assets\Audio\Male\Siren.wav" />
+    <Content Include="Assets\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\Icons\animals.png" />
+    <Content Include="Assets\Icons\male.png" />
+    <Content Include="Assets\Icons\nature.png" />
+    <Content Include="Assets\Icons\setting.png" />
+    <Content Include="Assets\Icons\taunt.png" />
+    <Content Include="Assets\Icons\tools.png" />
+    <Content Include="Assets\Icons\traffic.png" />
+    <Content Include="Assets\Icons\warning.png" />
+    <Content Include="Assets\Images\Animals\Bear.png" />
+    <Content Include="Assets\Images\Animals\Camel.png" />
+    <Content Include="Assets\Images\Animals\Cat.png" />
+    <Content Include="Assets\Images\Animals\Chicken.png" />
+    <Content Include="Assets\Images\Animals\Cow.png" />
+    <Content Include="Assets\Images\Animals\Crocodile.png" />
+    <Content Include="Assets\Images\Animals\Deer.png" />
+    <Content Include="Assets\Images\Animals\Dog.png" />
+    <Content Include="Assets\Images\Animals\Dragon.png" />
+    <Content Include="Assets\Images\Animals\Duck.png" />
+    <Content Include="Assets\Images\Animals\Eagle.png" />
+    <Content Include="Assets\Images\Animals\Elephant.png" />
+    <Content Include="Assets\Images\Animals\Hippo.png" />
+    <Content Include="Assets\Images\Animals\Horse.png" />
+    <Content Include="Assets\Images\Animals\Koala.png" />
+    <Content Include="Assets\Images\Animals\Lion.png" />
+    <Content Include="Assets\Images\Animals\Monkey.png" />
+    <Content Include="Assets\Images\Animals\MotorCycle.png" />
+    <Content Include="Assets\Images\Animals\Mouse.png" />
+    <Content Include="Assets\Images\Animals\Panda.png" />
+    <Content Include="Assets\Images\Animals\Pig.png" />
+    <Content Include="Assets\Images\Animals\Rabbit.png" />
+    <Content Include="Assets\Images\Animals\Sheep.png" />
+    <Content Include="Assets\Images\Animals\Tiger.png" />
+    <Content Include="Assets\Images\Animals\Wolf.png" />
+    <Content Include="Assets\Images\Nature\Earthquake.png" />
+    <Content Include="Assets\Images\Nature\Fire.png" />
+    <Content Include="Assets\Images\Nature\Lightning.png" />
+    <Content Include="Assets\Images\Nature\Rain.png" />
+    <Content Include="Assets\Images\Nature\Blizzard.png" />
+    <Content Include="Assets\Images\Traffic\Plane.png" />
+    <Content Include="Assets\Images\Traffic\Gun.png" />
+    <Content Include="Assets\Audio\Traffic\SpaceShip.wav" />
+    <Content Include="Assets\Images\Traffic\SpaceShip.png" />
+    <Content Include="Assets\Images\Traffic\Spring.png" />
+    <Content Include="Assets\Images\Male\Ship.png" />
+    <Content Include="Assets\Images\Male\Siren.png" />
+    <Content Include="Assets\Images\Traffic\Train.png" />
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\PackageAppXManifest\1240x1240.png" />
+    <Content Include="Assets\PackageAppXManifest\1240x600.png" />
+    <Content Include="Assets\PackageAppXManifest\24x24-large.png" />
+    <Content Include="Assets\PackageAppXManifest\24x24.png" />
+    <Content Include="Assets\PackageAppXManifest\300x300.png" />
+    <Content Include="Assets\PackageAppXManifest\310x310.png" />
+    <Content Include="Assets\PackageAppXManifest\50x50-large.png" />
+    <Content Include="Assets\PackageAppXManifest\50x50.png" />
+    <Content Include="Assets\PackageAppXManifest\620x300.png" />
+    <Content Include="Assets\PackageAppXManifest\71x71-large.png" />
+    <Content Include="Assets\PackageAppXManifest\71x71.png" />
+    <Content Include="Assets\PackageAppXManifest\88x88-large.png" />
+    <Content Include="Assets\PackageAppXManifest\88x88.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.jpg" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-200.jpg" />
+    <Content Include="Assets\SplashScreen.scale-400.jpg" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\WideTile.scale-100.png" />
+    <Content Include="Assets\WideTile.scale-125.png" />
+    <Content Include="Assets\WideTile.scale-150.png" />
+    <Content Include="Assets\WideTile.scale-200.png" />
+    <Content Include="Assets\WideTile.scale-400.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyUserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="settingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.1.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Services.Store.Engagement">
+      <Version>10.1711.28001</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.Services.Store.Engagement, Version=10.0">
+      <Name>Microsoft Engagement Framework</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
