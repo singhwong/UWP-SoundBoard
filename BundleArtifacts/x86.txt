@@ -1,2 +1,2 @@
-MainPackage=C:\Users\singhwong\source\repos\UWP\UWP-SoundBoard\bin\x86\Release\newSoundBoard_1.2.11.0_x86.appx
-SymbolPackage=C:\Users\singhwong\source\repos\UWP\UWP-SoundBoard\AppPackages\newSoundBoard_1.2.11.0_Test\newSoundBoard_1.2.11.0_x86.appxsym
+MainPackage=D:\MicrosoftStoreProjects\UWP-SoundBoard\bin\x86\Release\newSoundBoard_1.2.14.0_x86.appx
+SymbolPackage=D:\MicrosoftStoreProjects\UWP-SoundBoard\obj\x86\Release\Symbols\newSoundBoard_1.2.14.0_x86.appxsym

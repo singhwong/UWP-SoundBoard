@@ -1,6 +1,6 @@
-MainPackage=C:\Users\singhwong\source\repos\UWP\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.11.0_ARM.appx
-SymbolPackage=C:\Users\singhwong\source\repos\UWP\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.11.0\newSoundBoard_1.2.11.0_ARM.appxsym
-ResourcePack=C:\Users\singhwong\source\repos\UWP\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.11.0_scale-100.appx
-ResourcePack=C:\Users\singhwong\source\repos\UWP\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.11.0_scale-125.appx
-ResourcePack=C:\Users\singhwong\source\repos\UWP\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.11.0_scale-150.appx
-ResourcePack=C:\Users\singhwong\source\repos\UWP\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.11.0_scale-400.appx
+MainPackage=D:\MicrosoftStoreProjects\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.14.0_ARM.appx
+SymbolPackage=D:\MicrosoftStoreProjects\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.14.0\newSoundBoard_1.2.14.0_ARM.appxsym
+ResourcePack=D:\MicrosoftStoreProjects\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.14.0_scale-100.appx
+ResourcePack=D:\MicrosoftStoreProjects\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.14.0_scale-125.appx
+ResourcePack=D:\MicrosoftStoreProjects\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.14.0_scale-150.appx
+ResourcePack=D:\MicrosoftStoreProjects\UWP-SoundBoard\bin\ARM\Release\Upload\newSoundBoard_1.2.14.0_scale-400.appx

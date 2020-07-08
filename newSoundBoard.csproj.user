@@ -5,17 +5,19 @@
     <UseEmulator>true</UseEmulator>
   </PropertyGroup>
   <PropertyGroup>
-    <SplashScreenSource>C:\Users\wang\Pictures\bugle.png</SplashScreenSource>
+    <SplashScreenSource>C:\Users\singh\Downloads\Voice.png</SplashScreenSource>
     <AppxPackageIsForStore>True</AppxPackageIsForStore>
     <AppxShowAllApps>False</AppxShowAllApps>
     <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
     <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
-    <MediumTileSource>C:\Users\wang\Pictures\bugle.png</MediumTileSource>
-    <AppIconSource>C:\Users\wang\Pictures\bugle.png</AppIconSource>
-    <PackageLogoSource>C:\Users\singhwong\Downloads\Trumpet_48px_1178900_easyicon.net.png</PackageLogoSource>
-    <SmallTileSource>C:\Users\wang\Pictures\bugle.png</SmallTileSource>
-    <WideTileSource>C:\Users\wang\Pictures\bugle.png</WideTileSource>
-    <LargeTileSource>C:\Users\wang\Pictures\bugle.png</LargeTileSource>
+    <MediumTileSource>C:\Users\singh\Downloads\Voice.png</MediumTileSource>
+    <AppIconSource>C:\Users\singh\Downloads\Voice.png</AppIconSource>
+    <PackageLogoSource>C:\Users\singh\Downloads\Voice.png</PackageLogoSource>
+    <SmallTileSource>C:\Users\singh\Downloads\Voice.png</SmallTileSource>
+    <WideTileSource>C:\Users\singh\Downloads\Voice.png</WideTileSource>
+    <LargeTileSource>C:\Users\singh\Downloads\Voice.png</LargeTileSource>
+    <UapAppxPackageBuildMode>StoreOnly</UapAppxPackageBuildMode>
+    <Source>C:\Users\singh\Downloads\Voice.png</Source>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
